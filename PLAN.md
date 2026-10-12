@@ -109,6 +109,8 @@ Done when: `v0.1.0` is tagged, the link is on the CV, and the article is drafted
 
 ## Stretch (after v0.1.0 only)
 
+- Remote deployment: `server.run("streamable-http")` (or `server.streamable_http_app()` under uvicorn), a Dockerfile, and a CDK stack that runs it on ECS Fargate behind an ALB with TLS, with a bearer token or OAuth in front.
+  This is the AWS CDK and Fargate claim on the CV, in public.
 - `docker-compose` for a local HAPI server loaded with Synthea data.
 - TTL cache on patient summaries.
 - Token-budget-aware summaries that say what they left out.
