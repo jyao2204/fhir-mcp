@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# local working notes, not for the public repo
+PROGRESS.md
+AGENTS.md

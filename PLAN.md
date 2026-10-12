@@ -63,9 +63,10 @@ The code that proves you can program lives under the tools:
 
 - [x] Repo created with `uv`, `ruff`, `pytest`, CI, licence, this plan (scaffold).
 - [ ] Read the SDK quickstart: https://py.sdk.modelcontextprotocol.io/v2/
-- [ ] Write `src/fhir_mcp/server.py` with one hello-world tool (for example `ping` returning a string).
-- [ ] Register it with Claude Code and see a tool call succeed:
-      `claude mcp add fhir -- uv --directory /Users/jerwynyao/Documents/jerwyn-personal/fhir-mcp run python -m fhir_mcp.server`
+- [x] Write `src/fhir_mcp/server.py` with one hello-world tool (for example `ping` returning a string).
+- [x] Test it in the MCP Inspector (`uv run mcp dev src/fhir_mcp/server.py`).
+      Registering with Claude Code was skipped by choice; the Inspector is the test harness for now.
+      If wanted later: `claude mcp add -s user fhir -- uv --directory /Users/jerwynyao/Documents/jerwyn-personal/fhir-mcp run python -m fhir_mcp.server`
 - [ ] Read enough FHIR R4 to know: Patient, Observation, Condition, MedicationRequest, Encounter, AllergyIntolerance, Bundle, and search parameters.
       Start at https://hl7.org/fhir/R4/resourcelist.html and https://hl7.org/fhir/R4/search.html
 - [ ] Write a scratch script (not committed) that fetches one Patient and one Observation search from HAPI with `httpx` and prints the raw JSON.
